@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>nome da aba</title>
+    <meta name='viewport' content='width=device-width, initial=scale=1'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header-top">
+        <img src="./icon.png">
+        <div class="A1">
+            Controle Financeiro
+        </div>
+        <div class="responsive-menu">
+
+            <div class="icon-lines">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <ul>
+                <li><a><strong>X</strong> </a></li>
+                <li><a> Resumo </a></li>
+                <li><a> Dashboard </a></li>
+                <li><a> Configurações </a></li>
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="blocoB">
+        <div class="B1">
+            <div class="div-form">
+                <form>
+                    <div class="caixa-tipo-transação">
+                        <label">Tipo de Transação</label><br>
+                            <select class="div-select div-opções"><br>
+                                <option value="a">Venda</option>
+                                <option value="b" selected>Compra</option>
+                                </optgroup>
+                            </select>
+                    </div>
+                    <div class="caixa-nome-mercadoria">
+                        <label class="div-espaçamento-elementos">Nome da mercadoria</label><br>
+                        <input type="text" class="div-select"><br>
+                    </div>
+                    <label class="div-espaçamento-elementos">Valor</label><br>
+                    <input type="number" class="div-select"> <br><br>
+                    <td><button class="botão-transação">Adicionar Transação</button></td>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="blocoC">
+        <div class="div-extrato">
+            <strong>Extrato de Transações</strong>
+        </div>
+        <div class="C1">
+            <div>
+                <table width="371px">
+                    <div class="extrato-pt1">
+                        <tr>
+                            <td width="9px" class="borda-inferior"></td>
+                            <td width="72px" class="borda-inferior" id="tit-mercadoria"><strong>Mercadoria</strong></td>
+                            <td width="32px" class="borda-inferior"><strong>Valor</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="borda-inferior">x</td>
+                            <td class="borda-inferior">mercadoria indefinida</td>
+                            <td class="borda-inferior">R$00,00</td>
+                        </tr>
+                        <tr>
+                            <td class="borda-inferior">x</td>
+                            <td class="borda-inferior">mercadoria indefinida</td>
+                            <td class="borda-inferior">R$00,00</td>
+                        </tr>
+                        <tr>
+                            <td class="borda-inferior">x</td>
+                            <td class="borda-inferior">mercadoria indefinida</td>
+                            <td class="borda-inferior">R$00,00</td>
+                        </tr>
+                        <tr class="espaço-tab">
+                            <td height="3px" class="borda-superior"></td>
+                            <td height="3px" class="borda-superior"></td>
+                            <td height="3px" class="borda-superior"></td>
+                        </tr>
+                    </div>
+                    <div class="extrato-pt2">
+                        <tr>
+                            <td class="borda-superior"></td>
+                            <td class="borda-superior"><strong>Total</strong></td>
+                            <td class="borda-superior"><strong>R$00,00</strong></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><strong></strong></td>
+                            <td class="lucro"><strong>(LUCRO)</strong></td>
+                        </tr>
+                    </div>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

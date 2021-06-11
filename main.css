@@ -1,0 +1,212 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.header-top {
+    width: 100%;
+    height: 60px;
+    background: #E0E0E0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-top img {
+    width: 30px;
+    height: 27, 63;
+}
+
+.A1 {
+    color: 333333;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.icon-lines div {
+    width: 35px;
+    height: 5px;
+    background-color: 333333;
+    margin: 6px 0;
+}
+
+.responsive-menu ul {
+    color: white;
+    background-color: 333333;
+    position: fixed;
+    height: 100%;
+    width: 85.4%;
+    right: 0px;
+    top: 0;
+    margin: 0;
+    padding-inline-start: 0;
+    display: none;
+    z-index: 1;
+}
+
+.responsive-menu ul li {
+    text-align: right;
+    margin: 7px 0;
+    list-style-type: none;
+    padding: 7px 20px 7px 0;
+    font-size: 16px;
+}
+
+.responsive-menu ul li:nth-child(1) {
+    text-align: left;
+    background-color: 333333;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.responsive-menu ul li:hover:nth-child(1) {
+    background-color: 333333;
+    color: white;
+}
+
+.responsive-menu ul li:hover {
+    background-color: c4c4c4;
+    color: 333333;
+}
+
+.responsive-menu:hover ul {
+    display: block;
+}
+
+.blocoB {
+    color: 333333;
+    border-color: #979797;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 26px;
+}
+
+.div-opções {
+    color: #888888;
+}
+
+.div-select {
+    width: 371px;
+    height: 32px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #979797;
+    box-shadow: 0;
+    box-sizing: border-box;
+}
+
+.caixa-nome-mercadoria {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.botão-transação {
+    background-color: 333333;
+    color: white;
+    width: 371px;
+    height: 32px;
+    border-radius: 4px;
+    border-width: 1px;
+    text-align: center;
+}
+
+.blocoC {
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+
+}
+
+.div-extrato {
+    position: absolute;
+    width: 174px;
+    padding: 21px 68px 41px 89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.c1 {
+    width: 371px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    align-items: center;
+}
+#tit-mercadoria{
+    align-items: left;
+}
+.borda-inferior {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #979797;
+}
+
+.borda-superior {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #979797;
+}
+.final-tab{
+    padding-top: 11px;
+}
+.lucro{
+    font-size: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+@media (min-width: 767px) and (max-width: 1111px) {
+.responsive-menu ul {
+    color: white;
+    background-color: 333333;
+    position: fixed;
+    height: 100%;
+    width: 32.8%;
+    right: 0px;
+    top: 0;
+    margin: 0;
+    padding-inline-start: 0;
+    display: none;
+    z-index: 1;
+}
+
+    .blocoB {
+        border-bottom-style: none;
+        background-color: aquamarine;
+        color: 333333;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 26px;
+    }
+
+    .div-form {
+        border-color: #979797;
+        border: 1px;
+        border-style: solid;
+        display: flex;
+        justify-content: center;
+        border-radius: 4px;
+}
+}
