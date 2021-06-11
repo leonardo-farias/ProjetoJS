@@ -184,7 +184,7 @@ table {
     font-size: 14px;
 }
 
-@media (min-width: 767px) and (max-width: 1111px) {
+@media (min-width: 768px) and (max-width: 1112px) {
     .responsive-menu ul {
         color: white;
         background-color: 333333;
