@@ -36,22 +36,29 @@
     <div class="blocoB">
         <div class="B1">
             <div class="div-form">
+                <div class="tit-nvtransação">
+                    <strong>Nova Transação</strong>
+                </div>
                 <form>
                     <div class="caixa-tipo-transação">
                         <label>Tipo de Transação</label><br>
-                            <select class="div-select div-opções"><br>
-                                <option value="a">Venda</option>
-                                <option value="b" selected>Compra</option>
-                                </optgroup>
-                            </select>
+                        <select class="div-select div-opções"><br>
+                            <option value="a">Venda</option>
+                            <option value="b" selected>Compra</option>
+                            </optgroup>
+                        </select>
                     </div>
                     <div class="caixa-nome-mercadoria">
                         <label class="div-espaçamento-elementos">Nome da mercadoria</label><br>
-                        <input type="text" class="div-select"><br>
+                        <input type="text" class="div-select"><br class="br-movel">
                     </div>
-                    <label class="div-espaçamento-elementos">Valor</label><br>
-                    <input type="number" class="div-select"> <br><br>
-                    <td><button class="botão-transação">Adicionar Transação</button></td>
+                    <div class="caixa-valor">
+                        <label class="div-espaçamento-elementos">Valor</label><br>
+                        <input type="number" class="div-select">
+                    </div>
+                    <div class="adic-transação">
+                        <td><button class="botão-transação">Adicionar Transação</button></td>
+                    </div>
                 </form>
             </div>
         </div>
