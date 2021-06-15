@@ -8,6 +8,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
 .header-top {
     width: 100%;
     height: 60px;
@@ -82,13 +83,13 @@ body {
 .blocoB {
     color: 333333;
     max-width: 728px;
-    width: 90.26%;
+    width: calc(100% - 40px);
     border-color: #979797;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     justify-content: center;
     font-size: 14px;
-    padding: 26px 20px 0 20px;
+    padding: 26px 0;
     margin: 0 auto;
 }
 
@@ -111,7 +112,9 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
+.adic-transação{
+    padding-top: 20px;
+}
 .botão-transação {
     width: 100%;
     background-color: 333333;
@@ -124,7 +127,7 @@ body {
 
 .blocoC {
     max-width: 768px;
-    width: 90.26%;
+    width: calc(100% - 40px);
     color: black;
     display: flex;
     justify-content: center;
@@ -169,12 +172,6 @@ body {
     border-color: #979797;
 }
 
-.borda-superior {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-color: #979797;
-}
-
 .final-tab {
     padding-top: 11px;
 }
@@ -188,11 +185,28 @@ table {
     font-size: 14px;
 }
 
+tr.spaceUnder>td {
+    padding-top: 11px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #979797;
+}
+
+
+.spaceRigth {
+    text-align: right;
+}
+
+.spaceleft {
+    text-align: left;
+
+}
+
 @media(max-width: 411px) {
     .blocoB {
         color: 333333;
         max-width: 728px;
-        width: 90.26%;
+        width: calc(100% - 40px);
         border-color: #979797;
         border-bottom-width: 1px;
         border-bottom-style: solid;
@@ -230,9 +244,11 @@ table {
     }
 
     .blocoB {
-        min-width: 768px;
         max-width: 1112px;
-        width: 96.3%;
+        width: calc(100% - 40px);
+        color: black;
+        display: flex;
+        justify-content: center;
         border-bottom-style: none;
         border-bottom-width: 0;
         color: 333333;
@@ -245,6 +261,8 @@ table {
     }
 
     .B1 {
+        max-width: 1112px;
+        width: 100%;
         height: 189px;
         border-style: solid;
         border-color: #979797;
@@ -267,30 +285,32 @@ table {
         width: 100%;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: flex-end;
     }
 
-  .caixa-tipo-transação{
-    width: calc(25% - 40px);
-    height: 32px;
-    position: relative;
-    padding: 0 20px 20px 20px;
-    
-  }
-  .caixa-nome-mercadoria{
-    width: 50%;
-    height: 32px;
-    position: relative;
-    padding: 0 0 20px 0;
-    
-  }
-  .caixa-valor{
-    width: calc(25% - 40px);
-    height: 32px;
-    position: relative;
-    padding: 0 20px 20px 20px;
-  }
+    .caixa-tipo-transação {
+        width: calc(25% - 40px);
+        height: 32px;
+        position: relative;
+        padding: 0 20px 20px 20px;
+
+    }
+
+    .caixa-nome-mercadoria {
+        width: 50%;
+        height: 32px;
+        position: relative;
+        padding: 0 0 20px 0;
+
+    }
+
+    .caixa-valor {
+        width: calc(25% - 40px);
+        height: 32px;
+        position: relative;
+        padding: 0 20px 20px 20px;
+    }
 
     .div-select {
         width: none;
@@ -303,7 +323,7 @@ table {
         padding: 0;
     }
 
-    .adic-transação{
+    .adic-transação {
         color: white;
         width: 200px;
         height: 32px;
@@ -313,6 +333,27 @@ table {
         position: relative;
         padding: 20px 20px 20px 508px;
 
+    }
+
+    .blocoC {
+        max-width: 1112px;
+        width: calc(100% - 40px);
+        color: black;
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        margin: 0 auto;
+    }
+
+    .c1 {
+        max-width: 1112px;
+        width: 100%;
+        padding-top: 80px;
+        justify-content: space-around;
+        font-size: 14px;
+        align-items: center;
     }
 
     .br-movel {
