@@ -465,7 +465,56 @@ tr.spaceUnder>td {
         font-size: 20px;
         font-weight: 600;
         width: 411px;
-        padding-right: calc(90% - 280px);
+        padding-right: 500px;
+    }
+    .icon-lines{
+        display: none;
+    }
+    .responsive-menu{
+        height: 40px;
+        width: 350px;
+        font-size: 16px;
+        font-weight: 600;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        background-color: white;
+        display: flex;
+        align-items: flex-end;
+    }
+    .responsive-menu ul {
+        color: 333333;
+        background-color: white;
+        position: relative;
+        height: 40px;
+        width: 350px;
+        padding-inline-start: none;
+        display: inline-flex;
+        z-index: 1;
+    }
+    
+    .responsive-menu ul li {
+        text-align: center;
+        margin: 7px 0;
+        list-style-type: none;
+        padding: 4px 34px 4px 34px;
+        font-size: 16px;
+    }
+    
+    .responsive-menu ul li:nth-child(1) {
+        display: none;
+    }
+    
+    .responsive-menu ul li:hover:nth-child(1) {
+        display: none;
+    }
+    
+    .responsive-menu ul li:hover {
+        display: none;
+    }
+    
+    .responsive-menu:hover ul {
+        display: none;
     }
 
     .blocoB {
