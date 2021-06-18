@@ -22,7 +22,7 @@ body {
 
 .header-top img {
     width: 30px;
-    height: 27, 63;
+    height: 27.63;
 }
 
 .A1 {
@@ -114,9 +114,11 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.adic-transação{
+
+.adic-transação {
     padding-top: 20px;
 }
+
 .botão-transação {
     width: 100%;
     background-color: 333333;
@@ -362,4 +364,172 @@ tr.spaceUnder>td {
         display: none;
     }
 
+}
+
+@media (min-width: 1112px) and (max-width: 1500px) {
+    .header-top {
+        width: 100%;
+        height: 80px;
+    }
+    .header-top img {
+        width: 40px;
+        height: 36.84;
+        padding-right: 20px;
+    }
+    .A1 {
+        color: 333333;
+        font-size: 20px;
+        font-weight: 600;
+        width: 411px;
+        padding-right: calc(90% - 280px);
+    }
+    
+    .blocoB {
+        color: 333333;
+        width: 36%;
+        position: relative;
+        border-style: none;
+        justify-content: left;
+        display: inline-block;
+        font-size: 14px;
+        padding: 0 20px 0 20px;
+        margin: 26px 0;
+    }
+
+    .B1 {
+        width: 100%;
+        height: 344px;
+        border-style: solid;
+        border-color: #979797;
+        border-width: 1px;
+        border-radius: 4px;
+        box-shadow: 0;
+        box-sizing: border-box;
+        padding: 20px 15px 0 15px;
+    }
+
+    .tit-nvtransação {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 18px;
+        color: black;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blocoC {
+        position: relative;
+        max-width: none;
+        width: calc(64% - 60px);
+        color: black;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        padding: 20px 0px 40px 0px;
+        margin: 0 auto;
+    }
+
+    .div-extrato {
+        max-width: none;
+        width: 174px;
+        padding-top: 0px;
+        padding-left: calc(50% - 87px);
+        padding-bottom: 41px;
+        font-size: 18px;
+    }
+
+    .c1 {
+        max-width: none;
+        width: 100%;
+        padding-top: 80px;
+        justify-content: space-around;
+        font-size: 14px;
+        align-items: center;
+    }
+}
+@media (min-width: 1500px){
+    .header-top {
+        width: 100%;
+        height: 80px;
+        padding: 0 200px 0 200px;
+        }
+    .header-top img {
+        width: 40px;
+        height: 36.84;
+        padding-right: 20px;
+    }
+    .A1 {
+        color: 333333;
+        font-size: 20px;
+        font-weight: 600;
+        width: 411px;
+        padding-right: calc(90% - 280px);
+    }
+
+    .blocoB {
+        color: 333333;
+        width: 26.66%;
+        position: relative;
+        border-style: none;
+        justify-content: left;
+        display: inline-block;
+        font-size: 14px;
+        padding: 0 20px 0 200px;
+        margin: 26px 0;
+    }
+
+    .B1 {
+        width: 100%;
+        height: 344px;
+        border-style: solid;
+        border-color: #979797;
+        border-width: 1px;
+        border-radius: 4px;
+        box-shadow: 0;
+        box-sizing: border-box;
+        padding: 30px 15px 0 15px;
+    }
+
+    .tit-nvtransação {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 18px;
+        color: black;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blocoC {
+        position: relative;
+        max-width: none;
+        width: calc(100% - 26.66% - 420px);
+        color: black;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        padding: 30px 0px 40px 0px;
+        margin: 0 auto;
+    }
+
+    .div-extrato {
+        max-width: none;
+        width: 174px;
+        padding-top: 0px;
+        padding-left: calc(50% - 87px);
+        padding-bottom: 41px;
+        font-size: 18px;
+    }
+
+    .c1 {
+        max-width: none;
+        width: 100%;
+        padding-top: 80px;
+        justify-content: space-around;
+        font-size: 14px;
+        align-items: center;
+    }
 }
