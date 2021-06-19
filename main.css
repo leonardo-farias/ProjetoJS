@@ -442,6 +442,9 @@ tr.spaceUnder>td {
     .responsive-menu:hover ul {
         display: none;
     }
+    .div-blocos{
+        position: absolute;
+    }
 
     .blocoB {
         color: 333333;
@@ -451,8 +454,10 @@ tr.spaceUnder>td {
         justify-content: left;
         display: inline-block;
         font-size: 14px;
-        padding: 0 20px 0 20px;
-        margin: 26px 0;
+        padding: 26px 20px 0 20px;
+        margin: 0;
+        float: left;
+        
     }
 
     .B1 {
@@ -464,7 +469,7 @@ tr.spaceUnder>td {
         border-radius: 4px;
         box-shadow: 0;
         box-sizing: border-box;
-        padding: 20px 15px 0 15px;
+        padding: 0px 15px 0 15px;
     }
 
     .tit-nvtransação {
@@ -479,15 +484,17 @@ tr.spaceUnder>td {
     .blocoC {
         position: relative;
         max-width: none;
-        width: calc(64% - 60px);
+        width: calc(64% - 40px);
         color: black;
         display: inline-block;
         justify-content: center;
         align-items: center;
         text-align: center;
         font-size: 14px;
-        padding: 20px 0px 40px 0px;
+        padding: 46px 20px 40px 0px;
         margin: 0 auto;
+        box-sizing: border-box;
+        float: right;
     }
 
     .div-extrato {
@@ -593,6 +600,7 @@ tr.spaceUnder>td {
         font-size: 14px;
         padding: 10px 20px 0 200px;
         margin: 26px 0;
+        float: left;
     }
 
     .B1 {
@@ -604,7 +612,7 @@ tr.spaceUnder>td {
         border-radius: 4px;
         box-shadow: 0;
         box-sizing: border-box;
-        padding: 30px 15px 0 15px;
+        padding: 0px 15px 0 15px;
         margin: 0 auto;
     }
 
@@ -627,15 +635,16 @@ tr.spaceUnder>td {
         align-items: center;
         text-align: center;
         font-size: 14px;
-        padding: 30px 0px 40px 0px;
+        padding: 50px 200px 40px 0px;
         margin: 0 auto;
+        float: right;
     }
 
     .div-extrato {
         max-width: none;
         width: 174px;
         padding-top: 0px;
-        padding-left: calc(50% - 87px);
+        padding-left: calc(50% - 87px - 100px);
         padding-bottom: 41px;
         font-size: 18px;
     }

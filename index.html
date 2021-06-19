@@ -38,85 +38,91 @@
             </div>
         </div>
     </div>
-    <div class="blocoB">
-        <div class="B1">
-            <div class="div-form">
-                <div class="tit-nvtransação">
-                    <strong>Nova Transação</strong>
+    <div class="div-blocos">
+        <div class="blocoB">
+            <div class="B1">
+                <div class="div-form">
+                    <div class="tit-nvtransação">
+                        <strong>Nova Transação</strong>
+                    </div>
+                    <form>
+                        <div class="caixa-tipo-transação">
+                            <label>Tipo de Transação</label><br>
+                            <select class="div-select div-opções"><br>
+                                <option value="a">Venda</option>
+                                <option value="b" selected>Compra</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="caixa-nome-mercadoria">
+                            <label class="div-espaçamento-elementos">Nome da mercadoria</label><br>
+                            <input type="text" class="div-select" placeholder="Input"><br class="br-movel">
+                        </div>
+                        <div class="caixa-valor">
+                            <label class="div-espaçamento-elementos">Valor</label><br>
+                            <input type="number" placeholder="R$ 0,00" class="div-select">
+                        </div>
+                        <div class="adic-transação">
+                            <td><button class="botão-transação">Adicionar Transação</button></td>
+                        </div>
+                    </form>
                 </div>
-                <form>
-                    <div class="caixa-tipo-transação">
-                        <label>Tipo de Transação</label><br>
-                        <select class="div-select div-opções"><br>
-                            <option value="a">Venda</option>
-                            <option value="b" selected>Compra</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                    <div class="caixa-nome-mercadoria">
-                        <label class="div-espaçamento-elementos">Nome da mercadoria</label><br>
-                        <input type="text" class="div-select" placeholder="Input"><br class="br-movel">
-                    </div>
-                    <div class="caixa-valor">
-                        <label class="div-espaçamento-elementos">Valor</label><br>
-                        <input type="number"placeholder="R$ 0,00" class="div-select">
-                    </div>
-                    <div class="adic-transação">
-                        <td><button class="botão-transação">Adicionar Transação</button></td>
-                    </div>
-                </form>
             </div>
         </div>
-    </div>
-    <div class="blocoC">
-        <div class="div-extrato">
-            <strong>Extrato de Transações</strong>
-        </div>
-        <div class="C1">
-            <div>
-                <table width="100%" max-width="768px">
-                    <div class="extrato-pt1">
-                        <tr>
-                            <td width="10%" class="borda-inferior"></td>
-                            <td width="60%" class="borda-inferior spaceleft" id="tit-mercadoria">
-                                <strong>Mercadoria</strong></td>
-                            <td width="30%" class="borda-inferior spaceRigth"><strong>Valor</strong></td>
-                        </tr>
-                        <tr>
-                            <td class="borda-inferior">x</td>
-                            <td class="borda-inferior spaceleft">mercadoria indefinida</td>
-                            <td class="borda-inferior spaceRigth">R$00,00</td>
-                        </tr>
-                        <tr>
-                            <td class="borda-inferior">x</td>
-                            <td class="borda-inferior spaceleft">mercadoria indefinida</td>
-                            <td class="borda-inferior spaceRigth">R$00,00</td>
-                        </tr>
-                        <tr>
-                            <td class="borda-inferior">x</td>
-                            <td class="borda-inferior spaceleft">mercadoria indefinida</td>
-                            <td class="borda-inferior spaceRigth">R$00,00</td>
-                        </tr>
-                        <tr class="espaço-tab">
-                            <td height="3px" class="borda-superior"></td>
-                            <td height="3px" class="borda-superior"></td>
-                            <td height="3px" class="borda-superior"></td>
-                        </tr>
-                    </div>
-                    <div class="extrato-pt2">
-                        <tr class="spaceUnder">
-                            <td class="borda-superior"></td>
-                            <td class="borda-superio spaceleft"><strong>Total</strong></td>
-                            <td class="borda-superio spaceRigth"><strong>R$00,00</strong></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><strong></strong></td>
-                            <td class="lucro spaceRigth"><strong>(LUCRO)</strong></td>
-                        </tr>
-                    </div>
-                </table>
+        <div class="blocoC">
+            <div class="div-extrato">
+                <strong>Extrato de Transações</strong>
+            </div>
+            <div class="C1">
+                <div>
+                    <table width="100%" max-width="768px">
+                        <div class="extrato-pt1">
+                            <tr>
+                                <td width="10%" class="borda-inferior"></td>
+                                <td width="60%" class="borda-inferior spaceleft" id="tit-mercadoria">
+                                    <strong>Mercadoria</strong></td>
+                                <td width="30%" class="borda-inferior spaceRigth"><strong>Valor</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="borda-inferior">x</td>
+                                <td class="borda-inferior spaceleft">mercadoria indefinida</td>
+                                <td class="borda-inferior spaceRigth">R$00,00</td>
+                            </tr>
+                            <tr>
+                                <td class="borda-inferior">x</td>
+                                <td class="borda-inferior spaceleft">Lorem Ipsum is simply dummy text of the printing
+                                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                                    ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                                    to make a type specimen book. It has survived not only five centuries, but also the
+                                    leap into electronic</td>
+                                <td class="borda-inferior spaceRigth">R$00,00</td>
+                            </tr>
+                            <tr>
+                                <td class="borda-inferior">x</td>
+                                <td class="borda-inferior spaceleft">mercadoria indefinida</td>
+                                <td class="borda-inferior spaceRigth">R$00,00</td>
+                            </tr>
+                            <tr class="espaço-tab">
+                                <td height="3px" class="borda-superior"></td>
+                                <td height="3px" class="borda-superior"></td>
+                                <td height="3px" class="borda-superior"></td>
+                            </tr>
+                        </div>
+                        <div class="extrato-pt2">
+                            <tr class="spaceUnder">
+                                <td class="borda-superior"></td>
+                                <td class="borda-superio spaceleft"><strong>Total</strong></td>
+                                <td class="borda-superio spaceRigth"><strong>R$00,00</strong></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><strong></strong></td>
+                                <td class="lucro spaceRigth"><strong>(LUCRO)</strong></td>
+                            </tr>
+                        </div>
+                    </table>
 
+                </div>
             </div>
         </div>
     </div>
