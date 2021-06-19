@@ -384,7 +384,7 @@ tr.spaceUnder>td {
         font-size: 20px;
         font-weight: 600;
         width: 411px;
-        padding-right: 700px;
+        padding-right: calc(100% - 600px);
     }
     .icon-lines{
         display: none;
