@@ -605,6 +605,7 @@ tr.spaceUnder>td {
         box-shadow: 0;
         box-sizing: border-box;
         padding: 30px 15px 0 15px;
+        margin: 0 auto;
     }
 
     .tit-nvtransação {
