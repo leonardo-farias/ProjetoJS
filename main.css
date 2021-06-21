@@ -84,6 +84,10 @@ body {
 .responsive-menu:hover ul {
     display: block;
 }
+.botão-x{
+    text-decoration:none;
+    color: white;
+}
 
 .blocoB {
     color: 333333;
@@ -384,14 +388,14 @@ tr.spaceUnder>td {
         font-size: 20px;
         font-weight: 600;
         width: 411px;
-        padding-right: calc(100% - 600px);
+        padding-right: calc(100% - 1000px);
     }
     .icon-lines{
         display: none;
     }
     .responsive-menu{
         height: 40px;
-        width: 350px;
+        width: 507px;
         font-size: 16px;
         font-weight: 600;
         align-items: center;
@@ -402,7 +406,7 @@ tr.spaceUnder>td {
     }
     .botões-desktop{
         height: 40px;
-        width: 100%;
+        width: 506px;
         color: 333333;
         display: flex;
         position: relative;
@@ -531,30 +535,30 @@ tr.spaceUnder>td {
         font-size: 20px;
         font-weight: 600;
         width: 411px;
-        padding-right: 500px;
+        padding-right: 150px;
     }
     .icon-lines{
         display: none;
     }
     .responsive-menu{
         height: 40px;
-        width: 350px;
+        width: 540px;
         font-size: 16px;
         font-weight: 600;
         align-items: center;
         text-align: center;
         position: relative;
-        background-color: white;
         display: flex;
     }
     .botões-desktop{
         height: 40px;
-        width: 100%;
+        width: 506px;
         color: 333333;
         display: flex;
         position: relative;
         align-items: center;
         text-align: center;
+        background-color: white;
         
     }
     .botões-desktop a{
