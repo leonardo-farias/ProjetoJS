@@ -535,7 +535,7 @@ tr.spaceUnder>td {
         font-size: 20px;
         font-weight: 600;
         width: 411px;
-        padding-right: 150px;
+        padding-right: calc(100% - 740px);
     }
     .icon-lines{
         display: none;
@@ -549,6 +549,7 @@ tr.spaceUnder>td {
         text-align: center;
         position: relative;
         display: flex;
+        align-content: space-between;
     }
     .botões-desktop{
         height: 40px;
