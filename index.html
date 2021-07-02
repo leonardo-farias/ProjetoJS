@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>Primeiro projeto</title>
-    <meta name='viewport' content='width=device-width, initial=scale=1'>
+    <meta name='viewport' content='width=device-width'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="./main.css" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Header-->
     <div class="header-top">
         <img src="./icon.png">
         <div class="A1">
@@ -38,6 +38,7 @@
             </div>
         </div>
     </div>
+    <!--blocos de inserir informações e tabela-->
     <div class="div-blocos">
         <div class="blocoB">
             <div class="B1">
@@ -45,10 +46,10 @@
                     <div class="tit-nvtransação">
                         <strong>Nova Transação</strong>
                     </div>
-                    <form>
+                    <form id="formulario" >
                         <div class="caixa-tipo-transação">
-                            <label>Tipo de Transação</label><br>
-                            <select class="div-select div-opções"><br>
+                            <label name="tipoDeTransacao">Tipo de Transação</label><br>
+                            <select class="div-select div-opções" id="operacao"><br>
                                 <option value="a">Venda</option>
                                 <option value="b" selected>Compra</option>
                                 </optgroup>
@@ -56,14 +57,16 @@
                         </div>
                         <div class="caixa-nome-mercadoria">
                             <label class="div-espaçamento-elementos">Nome da mercadoria</label><br>
-                            <input type="text" class="div-select" placeholder="Input"><br class="br-movel">
+                            <input type="text" class="div-select" placeholder="Input" id="nomeMercadoria">
+                            <div id="erro_nomeDaMercadoria" style="color: red;"></div>
                         </div>
                         <div class="caixa-valor">
                             <label class="div-espaçamento-elementos">Valor</label><br>
-                            <input type="number" placeholder="R$ 0,00" class="div-select">
+                            <input type="text" onkeyup="mascaraMoeda(this)" placeholder="R$ 0,00" class="div-select" id="valor"/>
+                            <div id="erro_valor" style="color: red;"></div>
                         </div>
                         <div class="adic-transação">
-                            <td><button class="botão-transação">Adicionar Transação</button></td>
+                            <td><button class="botão-transação" type="button" onclick="validarCadastro()">Adicionar Transação</button></td>
                         </div>
                     </form>
                 </div>
@@ -126,6 +129,7 @@
             </div>
         </div>
     </div>
+    <script src=./script.js></script> 
 </body>
 
 </html>

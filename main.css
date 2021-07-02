@@ -1,8 +1,5 @@
 body {
     width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    height: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
@@ -373,7 +370,7 @@ tr.spaceUnder>td {
 
 }
 
-@media (min-width: 1112px) and (max-width: 1500px) {
+@media (min-width: 1112px) and (max-width: 1499px) {
     .header-top {
         width: 100%;
         height: 80px;
