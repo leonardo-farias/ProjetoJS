@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="./main.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Header-->
     <div class="header-top">
@@ -46,7 +47,7 @@
                     <div class="tit-nvtransação">
                         <strong>Nova Transação</strong>
                     </div>
-                    <form id="formulario" >
+                    <form id="formulario">
                         <div class="caixa-tipo-transação">
                             <label name="tipoDeTransacao">Tipo de Transação</label><br>
                             <select class="div-select div-opções" id="operacao"><br>
@@ -62,11 +63,13 @@
                         </div>
                         <div class="caixa-valor">
                             <label class="div-espaçamento-elementos">Valor</label><br>
-                            <input type="text" onkeyup="mascaraMoeda(this)" placeholder="R$ 0,00" class="div-select" id="valor"/>
+                            <input type="text" onkeyup="mascaraMoeda(this)" placeholder="R$ 0,00" class="div-select"
+                                id="valor" />
                             <div id="erro_valor" style="color: red;"></div>
                         </div>
                         <div class="adic-transação">
-                            <td><button class="botão-transação" type="button" onclick="validarCadastro()">Adicionar Transação</button></td>
+                            <td><button class="botão-transação" type="button" onclick="validarCadastro(event)">Adicionar
+                                    Transação</button></td>
                         </div>
                     </form>
                 </div>
@@ -86,25 +89,31 @@
                                     <strong>Mercadoria</strong></td>
                                 <td width="30%" class="borda-inferior spaceRigth"><strong>Valor</strong></td>
                             </tr>
-                            <tr>
-                                <td class="borda-inferior">x</td>
-                                <td class="borda-inferior spaceleft">mercadoria indefinida</td>
-                                <td class="borda-inferior spaceRigth">R$00,00</td>
-                            </tr>
-                            <tr>
-                                <td class="borda-inferior">x</td>
-                                <td class="borda-inferior spaceleft">Lorem Ipsum is simply dummy text of the printing
-                                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-                                    ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-                                    to make a type specimen book. It has survived not only five centuries, but also the
-                                    leap into electronic</td>
-                                <td class="borda-inferior spaceRigth">R$00,00</td>
-                            </tr>
-                            <tr>
-                                <td class="borda-inferior">x</td>
-                                <td class="borda-inferior spaceleft">mercadoria indefinida</td>
-                                <td class="borda-inferior spaceRigth">R$00,00</td>
-                            </tr>
+                            <div id="tabelaJS">
+                                <tr>
+                                    <td class="borda-inferior">x</td>
+                                    <td class="borda-inferior spaceleft">mercadoria indefinida</td>
+                                    <td class="borda-inferior spaceRigth">R$00,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="borda-inferior">x</td>
+                                    <td class="borda-inferior spaceleft">Lorem Ipsum is simply dummy text of the
+                                        printing
+                                        and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                        text
+                                        ever since the 1500s, when an unknown printer took a galley of type and
+                                        scrambled it
+                                        to make a type specimen book. It has survived not only five centuries, but also
+                                        the
+                                        leap into electronic</td>
+                                    <td class="borda-inferior spaceRigth">R$00,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="borda-inferior">x</td>
+                                    <td class="borda-inferior spaceleft">mercadoria indefinida</td>
+                                    <td class="borda-inferior spaceRigth">R$00,00</td>
+                                </tr>
+                            </div>
                             <tr class="espaço-tab">
                                 <td height="3px" class="borda-superior"></td>
                                 <td height="3px" class="borda-superior"></td>
@@ -129,7 +138,4 @@
             </div>
         </div>
     </div>
-    <script src=./script.js></script> 
-</body>
-
-</html>
+    <script src=./script.js> </script> </body> </html>

@@ -1,26 +1,26 @@
-var tipotransacao = document.getElementById("operacao")
+var tipoTransacao = document.getElementById("operacao")
 var nomeMercadoria = document.getElementById("nomeMercadoria");
 var valor = document.getElementById("valor");
 
-console.log("informaçõesTabela");
+console.log("informacoesTabela");
 
-var informaçõesTabela = [];
+var informacoesTabela = [];
 
-function mascaraMoeda(valorMoeda){
+function mascaraMoeda(valorMoeda) {
 
-  valorMoeda.value = valorMoeda.value.replace(/\D/g,"")
-  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{14})$/,"$1.$2");
-  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{11})$/,"$1.$2");
-  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{8})$/,"$1.$2");
-  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{5})$/,"$1.$2");
+  valorMoeda.value = valorMoeda.value.replace(/\D/g, "")
+  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{14})$/, "$1.$2");
+  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{11})$/, "$1.$2");
+  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{8})$/, "$1.$2");
+  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{5})$/, "$1.$2");
 
-  if(valorMoeda.value.length < 5 ){
-    valorMoeda.value = (valorMoeda.value/100).toFixed(2) + '';
+  if (valorMoeda.value.length < 5) {
+    valorMoeda.value = (valorMoeda.value / 100).toFixed(2) + '';
     valorMoeda.value = valorMoeda.value.replace(".", ",");
   }
-  
-  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{2})$/,"$1,$2");
- 
+
+  valorMoeda.value = valorMoeda.value.replace(/(\d{1})(\d{2})$/, "$1,$2");
+
 }
 
 function numberToReal(numero) {
@@ -32,7 +32,7 @@ function numberToReal(numero) {
 
 
 function validarCadastro() {
-  var tipotransacao = document.getElementById("operacao").value;
+  var tipoTransacao = document.getElementById("operacao").value;
   var nomeMercadoria = document.getElementById("nomeMercadoria").value;
   var valor = document.getElementById("valor").value;
 
@@ -54,21 +54,22 @@ function validarCadastro() {
   } else {
     erro_valor.innerHTML = "";
   }
-  if(erro = true){
-    localStorage.setItem("tipotransacao", JSON.stringify(tipotransacao.value));
-    localStorage.setItem("mercadoria", JSON.stringify(nomeMercadoria.value));
-    localStorage.setItem("valor", JSON.stringify(valor.value));
-  }
-  if(erro = true){
-   informaçõesTabela.push((tipotransacao),  (nomeMercadoria),  (valor))
-   var resultado1 = {
-     tipotransacao,
-     nomeMercadoria,
-     valor
-   }
-  console.log(resultado1)
-   
-  }
-  return informaçõesTabela
-}
+  if (!erro) {
+    informacoesTabela.push({transacao: tipoTransacao, Mercadoria: nomeMercadoria, valor: valor});
 
+    localStorage.setItem("#tabelaJS", JSON.stringify(informacoesTabela));
+  }
+}
+ function adicionarTransacao() {
+   informaçõesTabela = JSON.parse(localStorage.getItem("informacoesTabela"))
+
+  document.querySelector("#tabelaJS").innerHTML = informaçõesTabela.map((tab, idx_tab) => {
+    return `<div> 
+    <tr>
+      <td class="borda-inferior">` + tab.tipoTransacao +`</td>
+      <td class="borda-inferior spaceleft">` + tab.nomeMercadoria + `</td>
+      <td class="borda-inferior spaceRigth">` + tab.valor + `</td>
+    </tr>
+    </div>`
+  }).join(``)
+ 
