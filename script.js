@@ -29,6 +29,10 @@ function numberToReal(numero) {
   return numero.join(',');
 }
 
+function closeMenu() {
+  document.getElementsByClassName("responsive-menu ul").style.display = "none";
+};
+
 
 
 function validarCadastro() {
@@ -56,20 +60,22 @@ function validarCadastro() {
   }
   if (!erro) {
     informacoesTabela.push({transacao: tipoTransacao, Mercadoria: nomeMercadoria, valor: valor});
-
-    localStorage.setItem("#tabelaJS", JSON.stringify(informacoesTabela));
+    localStorage.setItem("transacao", JSON.stringify(informacoesTabela));
   }
 }
- function adicionarTransacao() {
-   informaçõesTabela = JSON.parse(localStorage.getItem("informacoesTabela"))
 
-  document.querySelector("#tabelaJS").innerHTML = informaçõesTabela.map((tab, idx_tab) => {
-    return `<div> 
-    <tr>
-      <td class="borda-inferior">` + tab.tipoTransacao +`</td>
-      <td class="borda-inferior spaceleft">` + tab.nomeMercadoria + `</td>
-      <td class="borda-inferior spaceRigth">` + tab.valor + `</td>
-    </tr>
-    </div>`
-  }).join(``)
- 
+ function adicionarTransacao() {
+   if(validarCadastro() == true);
+   informaçõesTabela = JSON.parse(localStorage.getItem("transacao"));
+   if(JSON.parse(localStorage.getItem("transacao"))!=null)
+  document.querySelector("#tabelaJS").innerHTML = informaçõesTabela.map((tab) => {
+    return 
+    `
+      <tr>
+        <td class="borda-inferior">` + tab.tipoTransacao +`</td>
+        <td class="borda-inferior spaceleft">` + tab.nomeMercadoria + `</td>
+        <td class="borda-inferior spaceRigth">` + tab.valor + `</td>
+      </tr>
+    `
+  }).join(``);
+}
