@@ -51,8 +51,8 @@
                         <div class="caixa-tipo-transação">
                             <label name="tipoDeTransacao">Tipo de Transação</label><br>
                             <select class="div-select div-opções" id="operacao"><br>
-                                <option value="a">Venda</option>
-                                <option value="b" selected>Compra</option>
+                                <option value="Venda">Venda</option>
+                                <option value="Compra" selected>Compra</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -89,31 +89,8 @@
                                     <strong>Mercadoria</strong></td>
                                 <td width="30%" class="borda-inferior spaceRigth"><strong>Valor</strong></td>
                             </tr>
-                            <div>
-                                <tr id="tabelaJS">
-                                    <td class="borda-inferior"></td>
-                                    <td class="borda-inferior spaceleft"></td>
-                                    <td class="borda-inferior spaceRigth"></td>
-                                </tr>
-                                <tr>
-                                    <td class="borda-inferior">x</td>
-                                    <td class="borda-inferior spaceleft">Lorem Ipsum is simply dummy text of the
-                                        printing
-                                        and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                        text
-                                        ever since the 1500s, when an unknown printer took a galley of type and
-                                        scrambled it
-                                        to make a type specimen book. It has survived not only five centuries, but also
-                                        the
-                                        leap into electronic</td>
-                                    <td class="borda-inferior spaceRigth">R$00,00</td>
-                                </tr>
-                                <tr>
-                                    <td class="borda-inferior">x</td>
-                                    <td class="borda-inferior spaceleft">mercadoria indefinida</td>
-                                    <td class="borda-inferior spaceRigth">R$00,00</td>
-                                </tr>
-                            </div>
+                            <tbody id="tbody_transacoes">
+                            </tbody>
                             <tr class="espaço-tab">
                                 <td height="3px" class="borda-superior"></td>
                                 <td height="3px" class="borda-superior"></td>
@@ -124,7 +101,7 @@
                             <tr class="spaceUnder">
                                 <td class="borda-superior"></td>
                                 <td class="borda-superio spaceleft"><strong>Total</strong></td>
-                                <td class="borda-superio spaceRigth"><strong>R$00,00</strong></td>
+                                <td class="borda-superio spaceRigth" id="vlTotal"><strong></strong></td>
                             </tr>
                             <tr>
                                 <td></td>

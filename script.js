@@ -6,6 +6,7 @@ console.log("informacoesTabela");
 
 var informacoesTabela = [];
 
+//Mascara padrão 10,90
 function mascaraMoeda(valorMoeda) {
 
   valorMoeda.value = valorMoeda.value.replace(/\D/g, "")
@@ -29,13 +30,14 @@ function numberToReal(numero) {
   return numero.join(',');
 }
 
+// Fechar menu
 function closeMenu() {
   document.getElementsByClassName("responsive-menu ul").style.display = "none";
 };
 
 
-
-function validarCadastro() {
+//Validação de formulário 
+function validarCadastro(e) {
   var tipoTransacao = document.getElementById("operacao").value;
   var nomeMercadoria = document.getElementById("nomeMercadoria").value;
   var valor = document.getElementById("valor").value;
@@ -59,23 +61,42 @@ function validarCadastro() {
     erro_valor.innerHTML = "";
   }
   if (!erro) {
-    informacoesTabela.push({transacao: tipoTransacao, Mercadoria: nomeMercadoria, valor: valor});
+    if (informacoesTabela == null){
+        informacoesTabela = [];
+        if(tipoTransacao =="Compra"){
+          valor = valor*-1; 
+      }else{
+          valor = parseFloat(valor); 
+      }
+    }
+    informacoesTabela.push({TipoTransacao: tipoTransacao, Mercadoria: nomeMercadoria, Valor: valor});
+    console.log("informacoesTabela", informacoesTabela);
     localStorage.setItem("transacao", JSON.stringify(informacoesTabela));
+    document.getElementById("nomeMercadoria").value = "";
+    document.getElementById("valor").value = "";
+    document.getElementById("operacao").value = "";
   }
-}
+  
+  return false;
+  
+  }
 
+// inserir informações na tabela
  function adicionarTransacao() {
-   if(validarCadastro() == true);
-   informaçõesTabela = JSON.parse(localStorage.getItem("transacao"));
-   if(JSON.parse(localStorage.getItem("transacao"))!=null)
-  document.querySelector("#tabelaJS").innerHTML = informaçõesTabela.map((tab) => {
-    return 
-    `
-      <tr>
-        <td class="borda-inferior">` + tab.tipoTransacao +`</td>
-        <td class="borda-inferior spaceleft">` + tab.nomeMercadoria + `</td>
-        <td class="borda-inferior spaceRigth">` + tab.valor + `</td>
-      </tr>
-    `
-  }).join(``);
+  var total = 0;
+  for (let idx_aln in informacoesTabela) {
+      console.log("PRODUTO", informacoesTabela[idx_aln].nomeMercadoria);
+      total += parseFloat(informacoesTabela[idx_aln].valor);
+      document.getElementById('tbody_transacoes').innerHTML += 
+      `<div>
+        <tr>
+        <td> ` + informacoesTabela[idx_aln].nomeMercadoria + `</td>
+        <td> ` + informacoesTabela[idx_aln].valor + `</td>
+        </tr>
+      </div>`
+  }
+  console.log("Total", total);
+  document.getElementById('vlTotal').innerHTML +=`<span><strong>` + "R$" + total + ` </strong></span></td>`
+
 }
+adicionarTransacao();
