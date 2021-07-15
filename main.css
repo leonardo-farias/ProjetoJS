@@ -171,6 +171,23 @@ body {
 #tit-mercadoria {
     align-items: left;
 }
+#tbody_transacoes{
+    border-color: #979797;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    width: 768px;
+}
+#tbody_transacoes tr{
+    border-color: #979797;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.espacotabela{
+    
+}
+.mercadoriaaaaa{
+    color: chartreuse;
+}
 
 .borda-inferior {
     padding-bottom: 5px;

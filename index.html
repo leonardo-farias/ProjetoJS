@@ -24,17 +24,17 @@
                     <div></div>
                 </div>
 
-                <ul>
-                    <li><a class="botão-x" onclick="closeMenu()"><strong>X</strong> </a></li>
+                <ul id="menu">
+                    <li><a class="botão-x" onclick="menuMobile()"><strong>X</strong> </a></li>
                     <li><a> Cadastro de transações </a></li>
                     <li><a> Limpar dados </a></li>
-                    <li><a> Salvar no servidor </a></li>
+                    <li><a onclick="gravarServidor()"> Salvar no servidor</a></li>
                 </ul>
             </div>
             <div class="botões-desktop">
-                <a href="#"> Limpar dados </a>
+                <a href="#" onclick="limpar()"> Limpar dados </a>
                 <a href="#" class="line"> Cadastro de transações </a>
-                <a href="#"> Salvar no servidor </a>
+                <a href="#" onclick="gravarServidor()"> Salvar no servidor </a>
 
             </div>
         </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="C1">
                 <div>
-                    <table width="100%" max-width="768px">
+                    <table>
                         <div class="extrato-pt1">
                             <tr>
                                 <td width="10%" class="borda-inferior"></td>
