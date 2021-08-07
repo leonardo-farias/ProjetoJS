@@ -1,5 +1,8 @@
 body {
     width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
@@ -85,6 +88,10 @@ body {
     text-decoration:none;
     color: white;
 }
+.div-blocos{
+    width: 100%;
+    margin: 0 auto;
+}
 
 .blocoB {
     color: 333333;
@@ -134,7 +141,6 @@ body {
 }
 
 .blocoC {
-    max-width: 768px;
     width: calc(100% - 40px);
     color: black;
     display: flex;
@@ -147,7 +153,6 @@ body {
 
 .div-extrato {
     position: absolute;
-    max-width: 768px;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 41px;
@@ -160,33 +165,16 @@ body {
 }
 
 .c1 {
-    max-width: 768px;
     width: 100%;
     padding-top: 80px;
     justify-content: space-around;
     font-size: 14px;
     align-items: center;
+    margin: 0 auto;
 }
 
 #tit-mercadoria {
     align-items: left;
-}
-#tbody_transacoes{
-    border-color: #979797;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    width: 768px;
-}
-#tbody_transacoes tr{
-    border-color: #979797;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-}
-.espacotabela{
-    
-}
-.mercadoriaaaaa{
-    color: chartreuse;
 }
 
 .borda-inferior {
@@ -208,6 +196,8 @@ body {
 table {
     border-collapse: collapse;
     font-size: 14px;
+    margin: 0 auto;
+
 }
 
 tr.spaceUnder>td {
@@ -227,6 +217,23 @@ tr.spaceUnder>td {
 
 }
 
+#areaTransacoes td{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #979797;
+}
+
+.tdOne{
+    width: 10%;
+}
+
+.tdTwot{
+    width: 60%;
+}
+
+.tdThree{
+    width: 30%;
+}
 @media(max-width: 411px) {
     .blocoB {
         color: 333333;
@@ -244,16 +251,22 @@ tr.spaceUnder>td {
     .tit-nvtransação {
         display: none;
     }
+    table {
+        min-width: 100%;
+    }
 }
 
 @media(min-width: 0px) and (max-width: 767px) {
     .tit-nvtransação {
         display: none;
     }
+    table {
+        min-width: 100%;
+    }
 }
 
 
-@media (min-width: 768px) and (max-width: 1111px) {
+@media (min-width: 768px) and (max-width: 1112px) {
     .responsive-menu ul {
         color: white;
         background-color: 333333;
@@ -384,10 +397,12 @@ tr.spaceUnder>td {
     .br-movel {
         display: none;
     }
-
+    table {
+        min-width: 100%;
+    }
 }
 
-@media (min-width: 1112px) and (max-width: 1499px) {
+@media (min-width: 1112px) and (max-width: 1500px) {
     .header-top {
         width: 100%;
         height: 80px;
@@ -462,6 +477,7 @@ tr.spaceUnder>td {
     }
     .div-blocos{
         position: absolute;
+        display: inline-block;
     }
 
     .blocoB {
@@ -475,7 +491,6 @@ tr.spaceUnder>td {
         padding: 26px 20px 0 20px;
         margin: 0;
         float: left;
-        
     }
 
     .B1 {
@@ -501,7 +516,6 @@ tr.spaceUnder>td {
 
     .blocoC {
         position: relative;
-        max-width: none;
         width: calc(64% - 40px);
         color: black;
         display: inline-block;
@@ -515,8 +529,7 @@ tr.spaceUnder>td {
         float: right;
     }
 
-    .div-extrato {
-        max-width: none;
+    .div-extrato { 
         width: 174px;
         padding-top: 0px;
         padding-left: calc(50% - 87px);
@@ -526,11 +539,14 @@ tr.spaceUnder>td {
 
     .c1 {
         max-width: none;
-        width: 100%;
+        min-width: 100%;
         padding-top: 80px;
         justify-content: space-around;
         font-size: 14px;
         align-items: center;
+    }
+    table {
+        min-width: 100%;
     }
 }
 @media (min-width: 1500px){
@@ -675,5 +691,8 @@ tr.spaceUnder>td {
         justify-content: space-around;
         font-size: 14px;
         align-items: center;
+    }
+    table {
+        min-width: 100%;
     }
 }

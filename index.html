@@ -34,7 +34,7 @@
             <div class="botões-desktop">
                 <a href="#" onclick="limpar()"> Limpar dados </a>
                 <a href="#" class="line"> Cadastro de transações </a>
-                <a href="#" onclick="gravarServidor()"> Salvar no servidor </a>
+                <a href="#" onclick="gravarServidor(event)"> Salvar no servidor </a>
 
             </div>
         </div>
@@ -50,7 +50,8 @@
                     <form id="formulario">
                         <div class="caixa-tipo-transação">
                             <label name="tipoDeTransacao">Tipo de Transação</label><br>
-                            <select class="div-select div-opções" id="operacao"><br>
+                            <select class="div-select div-opções" placeholder="Selecione o tipo de transação"
+                                id="operacao"><br>
                                 <option value="Venda">Venda</option>
                                 <option value="Compra" selected>Compra</option>
                                 </optgroup>
@@ -80,38 +81,32 @@
                 <strong>Extrato de Transações</strong>
             </div>
             <div class="C1">
-                <div>
-                    <table>
-                        <div class="extrato-pt1">
-                            <tr>
-                                <td width="10%" class="borda-inferior"></td>
-                                <td width="60%" class="borda-inferior spaceleft" id="tit-mercadoria">
-                                    <strong>Mercadoria</strong></td>
-                                <td width="30%" class="borda-inferior spaceRigth"><strong>Valor</strong></td>
-                            </tr>
-                            <tbody id="tbody_transacoes">
-                            </tbody>
-                            <tr class="espaço-tab">
-                                <td height="3px" class="borda-superior"></td>
-                                <td height="3px" class="borda-superior"></td>
-                                <td height="3px" class="borda-superior"></td>
-                            </tr>
-                        </div>
-                        <div class="extrato-pt2">
-                            <tr class="spaceUnder">
-                                <td class="borda-superior"></td>
-                                <td class="borda-superio spaceleft"><strong>Total</strong></td>
-                                <td class="borda-superio spaceRigth" id="vlTotal"><strong></strong></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><strong></strong></td>
-                                <td class="lucro spaceRigth"><strong>(LUCRO)</strong></td>
-                            </tr>
-                        </div>
-                    </table>
+                <table>
+                    <tr>
+                        <td class="borda-inferior tdOne"></td>
+                        <td class="borda-inferior spaceleft tdTwo" id="tit-mercadoria">
+                            <strong>Mercadoria</strong></td>
+                        <td class="borda-inferior spaceRigth tdThree"><strong>Valor</strong></td>
+                    </tr>
+                    <tbody id="areaTransacoes">
 
-                </div>
+                    </tbody>
+                    <tr class="espaço-tab">
+                        <td height="3px" class="borda-superior tdOne"></td>
+                        <td height="3px" class="borda-superior tdTwo"></td>
+                        <td height="3px" class="borda-superior tdThree"></td>
+                    </tr>
+                    <tr class="spaceUnder">
+                        <td class="borda-superior tdOne"></td>
+                        <td class="borda-superio spacelef tdTwot"><strong>Total</strong></td>
+                        <td class="borda-superio spaceRigth tdThree" id="vlTotal"><strong></strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong></strong></td>
+                        <td id="retornoTransicao" class="lucro spaceRigth"><strong>(LUCRO)</strong></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
