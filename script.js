@@ -47,131 +47,170 @@ function limpar() {
 
 
 
-  //Validação de formulário 
-  function validarCadastro(e) {
-    var tipoTransacao = document.getElementById("operacao").value;
-    var nomeMercadoria = document.getElementById("nomeMercadoria").value;
-    var valor = document.getElementById("valor").value;
+//Validação de formulário 
+function validarCadastro(e) {
+  var tipoTransacao = document.getElementById("operacao").value;
+  var nomeMercadoria = document.getElementById("nomeMercadoria").value;
+  var valor = document.getElementById("valor").value;
 
-    var erro_nomeDaMercadoria = document.getElementById("erro_nomeDaMercadoria");
-    var erro_valor = document.getElementById("erro_valor");
+  var erro_nomeDaMercadoria = document.getElementById("erro_nomeDaMercadoria");
+  var erro_valor = document.getElementById("erro_valor");
 
-    var erro = false;
+  var erro = false;
 
-    if (nomeMercadoria == "") {
-      ''
-      erro = true
-      erro_nomeDaMercadoria.innerHTML = "Preencher campo";
-    } else {
-      erro_nomeDaMercadoria.innerHTML = "";
-    }
-
-    if (valor == "") {
-      erro = true
-      erro_valor.innerHTML = "Preencher campo";
-    } else {
-      erro_valor.innerHTML = "";
-    }
-
-    if (!erro) {
-      if (informacoesTabela == null) {
-        informacoesTabela = []};
-
-        valor = valor.replace(".","").replace(",", ".");
-
-        
-      if (tipoTransacao == "Compra") {
-          valor = parseFloat(valor) * -1
-        } else {
-          valor = parseFloat(valor)
-        };
-
-      informacoesTabela.push({
-        TipoTransacao: tipoTransacao,
-        Mercadoria: nomeMercadoria,
-        Valor: valor
-      });
-
-      localStorage.setItem("transacao", JSON.stringify(informacoesTabela));
-      document.getElementById("nomeMercadoria").value = "";
-      document.getElementById("valor").value = "";
-      document.getElementById("operacao").value = "";
-
-      adicionarTransacao()
-    }
-
-    return false;
-
+  if (nomeMercadoria == "") {
+    ''
+    erro = true
+    erro_nomeDaMercadoria.innerHTML = "Preencher campo";
+  } else {
+    erro_nomeDaMercadoria.innerHTML = "";
   }
 
+  if (valor == "") {
+    erro = true
+    erro_valor.innerHTML = "Preencher campo";
+  } else {
+    erro_valor.innerHTML = "";
+  }
 
-  // inserir informações na tabela
-  function adicionarTransacao() {
-    informacoesTabela = JSON.parse(localStorage.getItem('transacao')) 
+  if (!erro) {
+    if (informacoesTabela == null) {
+      informacoesTabela = []
+    };
 
-    var total = 0;
+    valor = valor.replace(".", "").replace(",", ".");
 
 
-      document.getElementById('areaTransacoes').innerHTML = "";
-      for (let idx_aln in informacoesTabela) {
-        console.log("PRODUTO", informacoesTabela[idx_aln].Mercadoria);
-        total += parseFloat(informacoesTabela[idx_aln].Valor);
-        document.getElementById('areaTransacoes').innerHTML +=
-          `<div>
+    if (tipoTransacao == "Compra") {
+      valor = parseFloat(valor) * -1
+    } else {
+      valor = parseFloat(valor)
+    };
+
+    informacoesTabela.push({
+      TipoTransacao: tipoTransacao,
+      Mercadoria: nomeMercadoria,
+      Valor: valor
+    });
+
+    localStorage.setItem("transacao", JSON.stringify(informacoesTabela));
+    document.getElementById("nomeMercadoria").value = "";
+    document.getElementById("valor").value = "";
+    document.getElementById("operacao").value = "";
+
+    adicionarTransacao()
+  }
+
+  return false;
+
+}
+
+
+// inserir informações na tabela
+function adicionarTransacao() {
+  informacoesTabela = JSON.parse(localStorage.getItem('transacao'))
+
+  var total = 0;
+
+
+  document.getElementById('areaTransacoes').innerHTML = "";
+  for (let idx_aln in informacoesTabela) {
+    console.log("PRODUTO", informacoesTabela[idx_aln].Mercadoria);
+    total += parseFloat(informacoesTabela[idx_aln].Valor);
+    document.getElementById('areaTransacoes').innerHTML +=
+      `<div>
           <tr>
           <td> </td>
           <td> ` + informacoesTabela[idx_aln].Mercadoria + `</td>
-          <td class="spaceRigth"> ` + informacoesTabela[idx_aln].Valor.toString().replace(".",",") + `</td>
+          <td class="spaceRigth"> ` + informacoesTabela[idx_aln].Valor.toString().replace(".", ",") + `</td>
           </tr>
           </div>`
-      } 
-  
-    
-
-
-    // Valor final das transações
-    console.log("Total", total);
-
-    if (total >= 0) {
-      document.getElementById("vlTotal").innerHTML = `<span><strong>` + "R$" + total + ` </strong></span>`
-      document.getElementById("retornoTransicao").innerHTML = `<span><strong>` + "Lucro" + `</strong></span>`
-    } else if (total < 0) {
-      document.getElementById("vlTotal").innerHTML = `<span><strong>` + "R$" + total + ` </strong></span></td>`
-      document.getElementById("retornoTransicao").innerHTML = `<span><strong>` + "Prejuízo" + `</strong></span>`
-    }
   }
-  adicionarTransacao();
 
-  // gravar no servidor airtable
-  function gravarServidor(e) {
-    transacao = JSON.stringify(localStorage.getItem("transacao"));
-    var alunos = []
 
-    if (transacao != null) {
 
-      // buscar informações nas transações 
 
-      fetch('https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico?fields=Aluno&fields=Json', {
-        headers: {
-          Authorization: 'Bearer key2CwkHb0CKumjuM'
+  // Valor final das transações
+  console.log("Total", total);
+
+  if (total >= 0) {
+    document.getElementById("vlTotal").innerHTML = `<span><strong>` + "R$" + total + ` </strong></span>`
+    document.getElementById("retornoTransicao").innerHTML = `<span><strong>` + "Lucro" + `</strong></span>`
+  } else if (total < 0) {
+    document.getElementById("vlTotal").innerHTML = `<span><strong>` + "R$" + total + ` </strong></span></td>`
+    document.getElementById("retornoTransicao").innerHTML = `<span><strong>` + "Prejuízo" + `</strong></span>`
+  }
+}
+
+adicionarTransacao();
+
+function limparDados() {
+  var escolha = confirm("Você ira limpar todo extrato!");
+  if (escolha == true) {
+    localStorage.clear();
+    window.location.reload();
+  }
+
+}
+
+function SalvarTrsc() {
+
+  if (transacao.length > 0) {
+
+    fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
+
+      headers: {
+        Authorization: 'Bearer key2CwkHb0CKumjuM',
+      }
+    }).then((resp) => {
+      return resp.json()
+    }).then((data) => {
+      alunos = data.records
+
+      alunos.map((aluno) => {
+
+
+        if (aluno.fields.Aluno == "9864") {
+
+          Found = aluno.fields.Aluno;
+          Id = aluno.id;
+
+
         }
-      }).then((resp) => {
-        return resp.json()
-      }).then((data) => {
-        alunos = data.records
-        alunos.forEach(element => {
 
-          if (element.fields.Aluno == "9864") {
-            found = element.fields.Aluno.toString();
-            id = element.id.toString();
-          }
-        })
+
+
       })
+    }).then(() => {
+
+      console.log("Aluno=" + Found + " ID=" + Id)
+
+      if (Found == "9864") {
+
+        console.log("entrou PATCH")
 
 
-      if (found != "9864") {
+        fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
+          method: "PATCH",
+          headers: {
+            Authorization: 'Bearer key2CwkHb0CKumjuM',
+            "Content-Type": 'application/json'
+          },
+          body: JSON.stringify({
 
-        // gravar primeira na transação  
+            "records": [{
+              "id": Id,
+              "fields": {
+                "Aluno": "9864",
+                "Json": JSON.stringify(transacao),
+              }
+            }]
+
+          })
+        });
+      } else {
+
+        console.log("entrou POST")
 
         fetch('https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico', {
           method: "POST",
@@ -180,41 +219,24 @@ function limpar() {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            records: [{
-                fields: {
-                  Aluno: '9864',
-                  Json: transacao
-                }
+
+            "records": [{
+              "fields": {
+                "Aluno": "9864",
+                "Json": JSON.stringify(transacao),
               }
-            ]
-          })
-        })
+            }]
 
-      } else {
-
-        // update nas transações 
-
-        fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico/" + id, {
-          method: "PUT",
-          headers: {
-            Authorization: 'Bearer key2CwkHb0CKumjuM',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-
-            records: [{
-                fields: {
-                  Aluno: '9864',
-                  Json: transacao
-                }
-
-              }
-
-            ]
           })
         })
       }
-    } else {
-      alert("Nenhuma transação cadastrada")
-    }
+
+    })
+
+
+    alert("salvo com sucesso")
+  } else {
+    alert('Nenhuma transacao a ser salva')
   }
+
+}
