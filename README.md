@@ -17,7 +17,6 @@ Outros requisitos
 HTML:
 
 As opções do campo “Tipo de transação” são: Compra e Venda.
-Caso não exista nenhuma transação cadastrada, adicione a mensagem “Nenhuma transação cadastrada.” na lista do Extrato.
 
 CSS:
 
